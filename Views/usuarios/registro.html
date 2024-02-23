@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../styles/stylesRegistro.css">
+</head>
+<body>
+  <header>
+    <div class="fixed-top navegacionHome">
+    <nav class="navbar navbar-expand-lg bg-warning">
+      <div class="container-fluid" >
+          <img class="logoNav" src="../images/logo.png" alt=""/>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <form class="d-flex rounded-3">
+                  <button class="border-0 iconoBuscador ms-2" type="submit"><i class="bi bi-search"></i></button>
+                  <input class="form-control me-2 border-0 shadow-none" type="search" placeholder="Search" name="producto" aria-label="Search"/>
+              </form>
+              <div class="ms-auto">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a href='../../index.php' class="nav-link" aria-current="page">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href='#' class="nav-link" aria-current="page" >Servicios</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href='#'  class="nav-link" aria-current="page" >Productos</a>
+                      </li>
+                      <li class="nav-item inicioSesion">
+                           <!-- Button trigger modal -->
+                           <button type="button" class="btn btn-danger botonNavInicio" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Iniciar sesion
+                         </button>  
+                      </li>
+                    
+                  </ul>
+              </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+                    <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                          <div class="headerModal">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <h2><img src="https://static.vecteezy.com/system/resources/previews/009/521/733/non_2x/dog-silhouette-dog-vector.jpg"  height="30px"  width="25px" alt="">Inicio Michidogs</h2>
+                          <label for="" class="lineaDecorativa" ></label>
+                          <div class="modal-body">
+                            <form action="../../Controllers/cliente/inicioController.php" method="POST">
+                              <div class="row">
+                                <div class="form-group col-md-12" >
+                                  <input type="email"  class="form-control inputInicio" required name="usuario" id="email"  placeholder="Email"/>
+                                </div>
+                                <div class="form-group col-md-12" >
+                                    <input type="password"  class="form-control inputInicios" required name="contrasena" id="conPassword"  placeholder="Confirmar Contraseña"/>
+                                  </div>
+                              </div>
+                              <label for="" class="linkCuenta"> <a href="">Recuperar Contraseña</a> </label>
+                              <button type="submit" class="botonIniciar">Iniciar Sesión</button>
+                            </form>
+                                <a href="" class="crearCuenta">¿Cliente nuevo?  Crear cuenta </a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+
+  </header>
+  <div class="containerExterno">
+    <div class='containerFormulario'>
+        <h3 class="tituloRegistro"><img src="data:image/png;base64,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" alt="silueta de gato">REGISTRO MICHIDOGS</h3>
+        <label for="" class="decoracionRegistro"></label>    
+        <form action="../../Controllers/cliente/registroController.php" method="POST">
+                <div class="row">
+                    <div class="form-group col-md-12 " >
+                        <label for="" class="rol">Comprador</label><input type="radio" required name="rol" value='comprador'  id="usuNombre"/>
+                        <label for="" class="rol">Proveedor</label><input type="radio" required name="rol" value='proveedor' id="usuNombre"/>
+                      </div>
+                  <div class="form-group col-md-6">
+                    <input type="text" class="form-control inputRegistro"  id="usuNombre"  required name="nombre" placeholder="Primer Nombre"/> 
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="text" class="form-control inputRegistro" id="usuApellido" required name="apellido" placeholder="Primer Apellido"/>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <input type="phone" class="form-control inputRegistro"  id="usuTelefono" required name="telefono" placeholder="Teléfono" />
+                  </div>
+                  <div class="form-group col-md-12">
+                    <input type="text" class="form-control inputRegistro" id="correo" name="email"  required placeholder="Email"/>
+                  </div>
+                  <div class="form-group col-md-12" >
+                    <input type="password"  class="form-control inputRegistro" id="conPassword" required name="contrasena" placeholder="Contraseña"/>
+                  </div>
+                  <div class="form-group col-md-12" >
+                      <input type="password"  class="form-control inputRegistro" id="conPassword" required name="confirmarContrasena"  placeholder="Confirmar Contraseña"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <label class="form-check-label" >
+                      Aceptar Terminos y condiciones
+                    </label>
+                     <input  type="checkbox" id="gridCheck"/>
+                  </div>
+                </div>
+                <button type="submit" class="botonCrear">Crear Cuenta</button>
+              </form>
+        </div>
+  </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

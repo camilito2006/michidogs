@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.logoNav{
+    height: 90px;
+    width: 90px;
+}
+.d-flex,.d-flex button{
+    background-color:#ffffff;
+}
+div.container-fluid{
+    padding:0px 100px;
+}
+form.d-flex{
+    width: 100%;   
+    height: 50%;
+    margin: 0 20px;
+}
+.navbar-nav li{
+    display: flex;
+    margin-left: 10px;
+}
+
+.navbar-nav li.nav-item a.nav-link {
+    font-weight: bold;
+}
+/*Inicio Sesión*/
+.botonNavInicio{
+    white-space: nowrap;
+}
+.modal-content{
+    border-radius: 20px;
+    border: solid 2px #FA8516;
+    text-align: center;
+    height: 61vh;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.9);
+}
+
+
+.headerModal{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding:15px 15px ;
+}
+
+
+.lineaDecorativa{
+    width: 80%;
+    margin: 0 10%;
+    border-bottom: solid 2px #FA8516;
+}
+.inputInicio{
+    margin: 30px 0;
+}
+.linkCuenta{
+    display: block;
+    text-align: left;
+    margin: 20px ;
+}
+.linkCuenta a{
+    text-decoration: none;
+
+}
+
+.botonIniciar{
+    margin: 35px 0;
+    background: #FA8516;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.4s;
+}
+.botonIniciar:hover{
+    background: #FA8516;
+    box-shadow: 5px 4px 10px rgba(255, 140, 0, 0.9);
+    color: #ffffff;
+}
+.crearCuenta{
+    text-decoration: none;
+    color: #FA8516;
+}
+.containerExterno{
+    padding-top: 10px;
+    height: 100vh;
+    width: 100vw;
+    background: url("https://png.pngtree.com/background/20210711/original/pngtree-pet-cute-cartoon-dog-tmall-e-commerce-poster-picture-image_1107689.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: -290px 10px;
+    background-size: cover;
+}
+
+.containerFormulario{
+    border: solid 2px orange;
+    border-radius: 40px;
+    text-align: center;
+    height: 60vh;
+    width: 50vh;
+    background:  rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(255, 140, 0, 0.9);
+    padding: 40px;
+}
+.tituloRegistro img{
+    height: 40px;
+    width: 40px;
+    margin-left: 5px;
+}
+.row .form-group {
+    margin: 8px 0;
+}
+.form-check-label{
+    margin-bottom: 40px;
+    padding-right: 10px;
+}
+.rol{
+    margin: 0 5px;
+}
+.decoracionRegistro{
+    border-bottom: solid #FA8516;
+    width: 100%;
+}
+form .botonCrear{
+    background: #FA8516;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.botonCrear:hover{
+    background: #FA8516;
+    box-shadow: 5px 4px 10px rgba(255, 140, 0, 0.9);
+    color: #ffffff;
+}
+.form-group input{
+    border-radius: 30px;
+}
+
+@media only  screen and (width <= 1300px) and (height<1000px) {
+    .containerExterno{
+        padding: 110px 0 20px 0; 
+        height: 100%;
+        width: 100%;
+    }
+
+    .containerFormulario{ 
+        width: 80%;
+        height: 100%;
+    }
+}
